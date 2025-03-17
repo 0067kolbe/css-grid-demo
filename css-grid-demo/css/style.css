@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+.wrapper {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+section {
+  padding: 2em 0;
+}
+
+/*************************************** 
+   Example of flexbox for nav 
+***************************************/
+header, footer { 
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+  display: inline-block;
+  padding: .6em 1em;
+  margin-left: .6em;
+  background-color: #fff;
+  color: #222;
+  text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: hotpink;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+/*************************************** 
+   Demo #1 - Grid Layout
+***************************************/
+
+.grid-1 div {
+  border: 2px solid #e5c3d1;
+  padding: 30px;
+}
+
+.grid-1 {
+  background-color: #f2f2f2;
+  max-width: 800px;
+  
+  /* defining a grid */
+  
+
+  
+  /* grid-template-columns   */
+  /* each value (separated by a space) will specify the width of each column. 3 values = 3 columns */ 
+  
+  
+  /* values can use different units of measurement. ex. px, %, em, fr */  
+  
+  
+  /* setting column values to auto will expand that column to fill up the entire extra space */ 
+  
+    
+  
+  /* grid-template-rows */ 
+  /* control how much vertical space a row takes up by specifying height for each row (separated by a space). first value = first row. all other rows will be as tall as the content inside the grid items for that row. */
+  
+  
+  /* adding a second value will specify heights for the first two rows */
+  
+  
+
+  /* fr unit */ 
+  /* The fr unit represents a fraction of the available space in the grid container. 1fr = one fraction of the available space minus the two fixed values of 200px plus 200px */ 
+  
+    
+  /* Replacing the middle value with another fractional unit (1fr) will now divide the available space between the last two columns */ 
+  
+  
+  /* If you were to apply % value for each column you would still have to factor in the gap space but by applying all columns with fr it will divide the available space evenly for you. */
+  
+
+  /* If you set the middle track to 2fr, the space is split up by giving one part or fraction of the free space to the first and third column and two parts in the middle column. */
+  
+  
+
+    
+  
+  
+  /* repeat() */ 
+  /* If you have column or row values that consist of repeating values; use the repeat function.  */
+  
+  
+ 
+  
+  /* minmax() */ 
+  /* minmax() lets you set a grid tracks minimum and maximum size. */
+  
+ 
+  
+}
+
+
+
+/************************************ 
+   Demo #2 - Line based positioning 
+   and Grid area  
+************************************/
+
+.grid-2 {
+  background-color: blue;
+  padding: 5px;
+  width: 700px;
+  
+  /* grid properties */
+  
+  
+  
+
+  
+  
+  /* grid with areas */
+
+  
+
+
+ 
+}
+
+.grid-2 > div {
+  color: white;
+  font-size: 2rem;
+  padding: 5px;
+}
+
+.one {
+  background-color: darkorchid;
+  
+  /* grid positioning */
+  
+
+  
+  /* shorthand */
+
+  
+  /* using span */
+ 
+  
+  /* While all accomplish the same thing, you'll want to pick an approach and stick with it be be consistent */
+  
+
+}
+
+.two {
+  background-color: lightgreen;
+
+}
+
+.three {
+  background-color: hotpink;
+
+}
+
+.four {
+  background-color: lightskyblue;
+
+}
+
+.five {
+  background-color: yellow;
+
+}
+
+.six {
+  background-color: darkcyan;
+
+}
+
+.seven {
+  background-color: pink; 
+
+}
+
+.eight {
+  background-color: purple;
+
+}
+
+.nine {
+  background-color: cyan; 
+
+}
+
+
+
+
+
+/************************************ 
+   Demo #3 - Line based positioning 
+   and alignment  
+************************************/
+
+.grid-3 div {
+  background-color: black;
+  color: white;
+  padding: 2em;
+  text-align: center;
+}
+
+.grid-3 {
+
+  
+  /* default */
+
+  
+  /* default */
+
+}
+
+.grid-3 div:nth-child(1){
+
+  
+  /* shorthand */
+
+   
+  /* default */
+
+}
+
+.grid-3 div:nth-child(2){
+
+}
+
+.grid-3 div:nth-child(3){
+
+}
+
+.grid-3 div:nth-child(4){
+
+}
