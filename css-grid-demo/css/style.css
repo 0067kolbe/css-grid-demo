@@ -75,12 +75,12 @@ nav ul li a:focus {
   max-width: 800px;
   
   /* defining a grid */
-  
+  display: grid;
 
   
   /* grid-template-columns   */
   /* each value (separated by a space) will specify the width of each column. 3 values = 3 columns */ 
-  
+  grid-template-columns: 150px 150px;
   
   /* values can use different units of measurement. ex. px, %, em, fr */  
   
@@ -92,7 +92,7 @@ nav ul li a:focus {
   /* grid-template-rows */ 
   /* control how much vertical space a row takes up by specifying height for each row (separated by a space). first value = first row. all other rows will be as tall as the content inside the grid items for that row. */
   
-  
+  grid-template-rows: 100px;
   /* adding a second value will specify heights for the first two rows */
   
   
@@ -123,7 +123,7 @@ nav ul li a:focus {
   /* minmax() */ 
   /* minmax() lets you set a grid tracks minimum and maximum size. */
   
- 
+ grid-template-columns: repeat(3) minmax(200px 400px);
   
 }
 
@@ -141,14 +141,18 @@ nav ul li a:focus {
   
   /* grid properties */
   
-  
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
   
 
   
   
   /* grid with areas */
 
-  
+  grid-template-areas: "div1 div2 div3"
+  "div4 div5 div6"
+  "div7 div8 div9";
 
 
  
@@ -163,58 +167,71 @@ nav ul li a:focus {
 .one {
   background-color: darkorchid;
   
-  /* grid positioning */
-  
+ /* grid positioning
+  grid-column-start: 1;
 
+  grid-column-end: 3;
+
+  grid-row-start: 1;
+
+  grid-row-end: 3;
   
   /* shorthand */
 
   
   /* using span */
- 
+
   
   /* While all accomplish the same thing, you'll want to pick an approach and stick with it be be consistent */
   
-
+grid-template-areas: "div1";
 }
 
 .two {
   background-color: lightgreen;
+  grid-template-areas: "div2";
 
 }
 
 .three {
   background-color: hotpink;
+  grid-template-areas: "div3";
 
 }
 
 .four {
   background-color: lightskyblue;
+  grid-template-areas: "div4";
 
 }
 
 .five {
   background-color: yellow;
+  grid-template-areas: "div5";
 
 }
 
 .six {
   background-color: darkcyan;
+  grid-template-areas: "div6";
 
 }
 
 .seven {
   background-color: pink; 
+  grid-template-areas: "div7";
 
 }
 
 .eight {
   background-color: purple;
+  grid-template-areas: "div8";
 
 }
 
 .nine {
   background-color: cyan; 
+  grid-template-areas: "div9";
 
 }
 
@@ -236,11 +253,11 @@ nav ul li a:focus {
 
 .grid-3 {
 
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(3) 100px;
+-ms-grid-row-span: 1 / -1;
   
-  /* default */
-
-  
-  /* default */
 
 }
 
@@ -255,11 +272,11 @@ nav ul li a:focus {
 }
 
 .grid-3 div:nth-child(2){
-
+ grid-column: 1;
 }
 
 .grid-3 div:nth-child(3){
-
+grid-column: 4 / 1;
 }
 
 .grid-3 div:nth-child(4){
